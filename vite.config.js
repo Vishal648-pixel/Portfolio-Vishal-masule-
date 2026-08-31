@@ -10,10 +10,12 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        // Split vendor libraries into separate chunks for better caching
-        manualChunks: {
-          react: ['react', 'react-dom'],
-          aos: ['aos'],
+        // Must be a function for Vite 8 (Rolldown).
+        // AWS Amplify's default config injects an object, which crashes the build.
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
         },
       },
     },
