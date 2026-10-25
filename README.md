@@ -5,7 +5,6 @@ A modern, responsive portfolio website showcasing skills, projects, certificatio
 **Live Site:** [https://www.vishal99.online/]
 **GitHub:** [https://github.com/Vishal648-pixel/Portfolio-Vishal-masule-]
 
----
 
 ## 🎯 Project Overview
 
